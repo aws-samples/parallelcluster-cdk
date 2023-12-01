@@ -109,10 +109,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_1],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                     {
                         "Name": "icl2",
@@ -125,10 +122,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_2],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                     {
                         "Name": "icl3",
@@ -141,10 +135,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_3],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                     {
                         "Name": "spr1",
@@ -157,10 +148,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_1],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                     {
                         "Name": "spr2",
@@ -173,10 +161,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_2],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                     {
                         "Name": "spr3",
@@ -189,10 +174,7 @@ class HpcClusterStack(Stack):
                         "Networking": {
                             "SubnetIds": [pcluster_compute_subnet_3],
                             "AdditionalSecurityGroups": self.additional_security_groups,
-                        },
-                        # "CustomActions": {
-                        #     "OnNodeConfigured": self.compute_postinstall_sequence
-                        # }
+                        }
                     },
                 ],
             },
@@ -228,6 +210,5 @@ class HpcClusterStack(Stack):
             properties={
                 "ClusterName": config["label"],
                 "ClusterConfiguration": self.cluster_config,
-                # "RollbackOnFailure": config["pcluster"]["rollback_on_failure"],
             },
         )
