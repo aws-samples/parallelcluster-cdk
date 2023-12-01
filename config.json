@@ -1,0 +1,23 @@
+{
+    "label": "PClusterCDK",
+    "key_name": "KeyFromCDK",
+    "key_material": "<your-ssh-public-key-material>",
+    "parameter_root": "/hpc/pcluster-cdk",
+    "trusted_cidr":"<IP-range-to-allow-SSH-access>",
+    "pcluster": {
+        "version": "3.7.2"
+    },
+    "vpc": {
+        "nat_per_az": false,
+        "enabled_az_count": 3,
+        "cidr": "10.0.0.0/16"
+    },
+    "lustre": {
+        "capacity": 1200,
+        "throughput": 125
+    },
+    "zfs": {
+        "capacity": 256,
+        "throughput": 320
+    }
+}
