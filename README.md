@@ -2,6 +2,15 @@
 
 Example deployment using the CFn custom resource functionality added to ParallelCluster in version 3.6.0.
 
+The file `config.json` provides a convenient location to store and update variables which might be used throughout the app.
+
+Configuration parameters used by default:
+- `label`: Used to name the ParallelCluster deployment stack
+- `key_name`: The name given to the SSH key when added to your account
+- `key_material`: The contents of the SSH public key you want to add for use with ParallelCluster
+- `parameter_root`: Prefix for SSM parameters deployed by the solution
+- `trusted_cidr`: IP range added to the ParallelCluster controller security group ingress rule
+
 ### Setup
 
 1. Clone the repository
